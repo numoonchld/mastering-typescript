@@ -20,7 +20,7 @@
       apples = 5;
       ```
 
-## When to Annotate vs. allow Type Inference to take over
+### When to Annotate vs. allow Type Inference to take over
 
 - Annotate in the following scenarios:
 
@@ -30,3 +30,35 @@
 
 - Other than the above 3 scenarios, allow Type Inference to kick in
 - Goal of using TypeScript as a developer is to prevent any variable getting assigned the type `any`
+
+### Functions
+
+- while Type Annotation can check for argument and return type discrepancies in functions, it does not rectify incorrect logic within functions!
+  - does not vet the logic within the function defined
+
+#### Type Annotations
+
+- for functions, types have to be annotated for
+
+  - arguments values
+  - return value
+
+- when return type annotation is added, a `return` statement has to be mandatorily specfied
+
+#### Type Inference
+
+- infers function return value type automatically
+  - but not for arguments of the function
+- never use Type Inference for function returns, because it then fails to alert the developer if the return keyword is missing
+
+#### `void` and `never`
+
+- `void` return Type Annotation allows
+
+  - no return keyword at all
+  - `return null`
+  - `return undefined`
+
+- `never` is to specify the function should never return anything!
+  - the function is always expected to end prematuraly
+  - example: a function whose sole act is to throw an error
