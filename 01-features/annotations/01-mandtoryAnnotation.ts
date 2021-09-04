@@ -24,7 +24,7 @@ for (let i = 0; i < words1.length; i++) {
 
 // to fix the above block of code
 const words2 = ['red', 'green', 'blue'];
-let foundWord2: boolean; // Here, foundWord gets initialized to `any` type
+let foundWord2: boolean; // Here, foundWord2 gets TYPE assigned proactively by the developer
 
 for (let i = 0; i < words2.length; i++) {
   if (words2[i] === 'green') {
