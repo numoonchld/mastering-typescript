@@ -29,3 +29,4 @@
   3. a function returns ambigious `any` type, and the value type needs to be disambiguated
 
 - Other than the above 3 scenarios, allow Type Inference to kick in
+- Goal of using TypeScript as a developer is to prevent any variable getting assigned the type `any`
