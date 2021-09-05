@@ -2,7 +2,7 @@ import { Company } from './Company';
 import { User } from './User';
 
 // INSTRUCTION FOR OTHER CLASSES FOR THEIR INSTANCES TO BE AN ARGUMENT FOR ADDING MARKER FUNCTION
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number;
     long: number;

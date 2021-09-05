@@ -92,3 +92,5 @@
 ## Multi-Types Values
 
 - Since Interfaces can be only partial properties of a class, a single value can be of multiple types, by satisfying multiple interfaces
+
+- use `implements` to extend base Types
