@@ -17,3 +17,7 @@
 
 - do not refer to the code in this repository to copy and paste into your project
   - there are several examples of erroneous implementations to set examples of how not to do implementations
+
+## primary tools within TS
+
+- Interfaces + Classes = Strong Code Reuse in TS
