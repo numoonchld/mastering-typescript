@@ -83,3 +83,9 @@ interface Sortable {
 ## Inheritance
 
 - `Sorter` may be made made the parent class of `LinkedList`, `NumbersCollection` and `CharacterCollection`
+
+- Abstract Class cannot be used instantiate from
+  - they can only be used as Parent Class for other Classes, i.e. they may only be extended from
+  - but references to methods that may exist in the child classes may exist in the Abstract Class as well
+    - however, they need to be initialized in the Abstract Class with the expected Type Signatures
+    - and Child Classes need to promise to implement those initialized methods, with the correct Type Signatures
