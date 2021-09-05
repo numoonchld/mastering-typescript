@@ -38,7 +38,7 @@
 - clarifies the type of value we are working with
 - similar to `switch`'s `case` statement for Types checking
 
-```js
+```ts
 console.log([1, 2, 3] instanceof Array); // yields `true`
 
 if (this.collection instanceof Array) {
@@ -57,8 +57,29 @@ if (this.collection instanceof String) {
 
 - `get` keyword enables a class method to be used as a `property`
 
-```js
+```ts
 get length(): number {
   return this.data.length;
 }
 ```
+
+## Interfaces: Instruction for `class`
+
+- While it is great that Interfaces may be used to describe the structure of a plain object
+
+  - its real value lies in being able to setup a contract between different classes
+
+- `Sorter` just needs an input of `Sortable` kind, which is an interface
+  - `NumbersCollection` and `CharacterCollection` both can pass the checks of `Sortable` Interface
+
+```ts
+interface Sortable {
+  length: number;
+  compare(leftIndex: number, rightIndex: number): boolean;
+  swap(leftIndex: number, rightIndex: number): void;
+}
+```
+
+## Inheritance
+
+- `Sorter` may be made made the parent class of `LinkedList`, `NumbersCollection` and `CharacterCollection`
