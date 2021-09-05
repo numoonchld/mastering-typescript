@@ -5,9 +5,14 @@
   - error mouseover messages (in VSCode after having installed TS support plugins)
   - comments
 
-## setup
+## setup typescript tools
 
 - `npm install -g typescript ts-node`
+
+  - TS Node `executes` TS files
+
+- `npm install -g parcel-bundler`
+  - Run TS Code in browser
 
 ## typescript compiler help
 

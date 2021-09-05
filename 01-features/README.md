@@ -84,7 +84,7 @@
 /* CREATE A NEW TYPE USING AN INTERFACE */
 // INTERFACE NAME ALWAYS BEGINS WITH A CAPITAL LETTER!
 interface Vehicle {
-  name: string;
+  name: string; // note the semicolon, not a comma!!
   year: number;
   broken: boolean;
 }
