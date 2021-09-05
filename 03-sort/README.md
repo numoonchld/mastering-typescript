@@ -89,3 +89,16 @@ interface Sortable {
   - but references to methods that may exist in the child classes may exist in the Abstract Class as well
     - however, they need to be initialized in the Abstract Class with the expected Type Signatures
     - and Child Classes need to promise to implement those initialized methods, with the correct Type Signatures
+
+## Interfaces vs. Abstract Classes
+
+- **Interfaces**:
+
+  - setup contract between different classes
+  - used when very different objects need to work together
+  - good for loose coupling
+
+- **Abstract Classes**:
+  - also useful for setting up contract between different classes
+  - used when trying to build an object definition
+  - strongly couples classes together
