@@ -1,4 +1,4 @@
-# Simple TyopeScript Example
+# Simple TypeScript Example
 
 ## Setup
 
@@ -13,6 +13,6 @@
   - this compiles and runs the `.ts` in one shot
     - is equivalent to `tsc index.js && node index.js`
 
-## Explantion
+## Explanation
 
 - `index.ts` file has an implementation of an `Interface` to speficy TYPE of response payload of an axios network request
