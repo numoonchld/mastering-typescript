@@ -99,6 +99,8 @@ interface Vehicle {
 
 ## Classes
 
+- `tsc classes.ts && node classes.js`
+
 - These are blueprints to create an `object` with some
 
   - **fields/properties** (values)
@@ -107,3 +109,67 @@ interface Vehicle {
 - The represent a class of things
   - example: if `Mobile Phone` is a class,
     - `iPhone`, `Galaxy Note`, `Pixel`, `Mi A3` are all instances of the `Mobile Phone` class
+
+### Basic Inheritance
+
+- the base class is the parent class or super class
+
+  - child class extends from parent class
+  - with use of keyword `extends`
+
+```js
+/* CONSIDER VEHICLE CLASS */
+class Vehicle {
+  drive(): void {
+    console.log('vroom vroom');
+  }
+
+  honk(): void {
+    console.log('beep beep');
+  }
+}
+/* INHERITANCE */
+class Car extends Vehicle {
+  drive(): void {
+    console.log('brr');
+  }
+}
+```
+
+### Access Modifiers for Classes
+
+- `public`, `private`, `protected` (applies and works the same way for both fields and methods)
+
+  - fields or properties marked `public` can be called anywhere, anytime
+    - this is the default, i.e. if no modifier for a field/property is specified
+  - ones marked `private` can only be called by **other methods** inside that exact class definition
+    - this is NOT for application security at all!
+    - restrict the different methods that other developers can call
+    - access modifier keys are for communicating the purpose of the methods available to other developes or self in the future
+  - `protected` ones can be called by
+    - _other methods in this class_, or
+    - _other methods in child classes_
+
+- when overriding methods in child classes, the SAME access modifier has to be used
+  - do not alter the access modifier when overriding methods in child classes
+
+### Shorthand for Class Fields
+
+- the following code is the get an initial value for class field
+
+```js
+class Vehicle {
+  color: string;
+  constructor(color: string) {
+    this.color = color;
+  }
+}
+```
+
+- the shorthand for the above code is as follows
+
+```js
+class Vehicle {
+  constructor(public color: string) {}
+}
+```
