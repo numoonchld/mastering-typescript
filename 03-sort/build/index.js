@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var NumbersCollection_1 = require("./NumbersCollection");
+// import { Sorter } from './Sorter';
 var CharacterCollection_1 = require("./CharacterCollection");
 var LinkedList_1 = require("./LinkedList");
 /* NUMERICAL ARRAY SORTING */
