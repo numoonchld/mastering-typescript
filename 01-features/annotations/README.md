@@ -20,18 +20,30 @@
       apples = 5;
       ```
 
-### When to Annotate vs. allow Type Inference to take over
+### The Balancing Act
+
+- The goal of the balancing act in TypeScript is to ensure no `any` type allocation occurs
+
+  - prevent `any` type from being assigned to any variable
+
+- Type Inference should not be used _in all situations_
+
+  - Some situations demand for Type Annotation by the developer, especially in the situations described in the following section
+
+- Utilize Type Inference only when no Type Disambiguation to `any` type will not occur
+
+### When to Annotate Type vs. allow Type Inference to take over
 
 - Annotate in the following scenarios:
 
   1. variable declaration and initialization occur in different lines
   2. type of varibale cannot be inferred
-  3. a function returns ambigious `any` type, and the value type needs to be disambiguated
+  3. a function returns ambigious `any` type, and the value type needs to be explicitly disambiguated
 
 - Other than the above 3 scenarios, allow Type Inference to kick in
 - Goal of using TypeScript as a developer is to prevent any variable getting assigned the type `any`
 
-### Functions
+## Functions
 
 - while Type Annotation can check for argument and return type discrepancies in functions, it does not rectify incorrect logic within functions!
   - does not vet the logic within the function defined
@@ -62,3 +74,17 @@
 - `never` is to specify the function should never return anything!
   - the function is always expected to end prematuraly
   - example: a function whose sole act is to throw an error
+
+## Interfaces
+
+- A new Type Definition
+  - describing the property names and value types of an object
+- Goal of an Interface: A Gatekeeper for Functions whose inputs are objects
+  - that go into a function that accepts objects for instance
+
+### Code Reuse with Interfaces
+
+- Create functions that accept arguments that are type set with interfaces
+- Objects/classes can decide to implement a given interface to work with a function
+
+##
