@@ -13,7 +13,7 @@
       ```js
       let apples = 5; // TYPE INFERENCE KICKS IN, SETTING THE TYPE OF `apples` TO `number`
       ```
-  - however, - if the _variable declration_ and _varaible initialization_ are **on different lines**
+  - however, - if the _variable declration_ and _varaible initialization_ are **on different lines**, mandatorily annotate type
     - example:
       ```js
       let apples; // TYPE INFERENCE SETS TYPE OF `apple` TO `any`
