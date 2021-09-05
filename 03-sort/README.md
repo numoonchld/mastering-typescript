@@ -97,8 +97,10 @@ interface Sortable {
   - setup contract between different classes
   - used when very different objects need to work together
   - good for loose coupling
+  - reach out to using Interfaces first for enabling code reuse
 
 - **Abstract Classes**:
   - also useful for setting up contract between different classes
   - used when trying to build an object definition
   - strongly couples classes together
+  - if Classes are already very closely related, use Inheritance and Abstract classes
