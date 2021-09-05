@@ -79,12 +79,31 @@
 
 - A new Type Definition
   - describing the property names and value types of an object
-- Goal of an Interface: A Gatekeeper for Functions whose inputs are objects
-  - that go into a function that accepts objects for instance
+
+```js
+/* CREATE A NEW TYPE USING AN INTERFACE */
+// INTERFACE NAME ALWAYS BEGINS WITH A CAPITAL LETTER!
+interface Vehicle {
+  name: string;
+  year: number;
+  broken: boolean;
+}
+```
 
 ### Code Reuse with Interfaces
 
+- Goal of an Interface: A Gatekeeper for Functions whose inputs are objects
+  - that go into a function that accepts objects for instance
 - Create functions that accept arguments that are type set with interfaces
 - Objects/classes can decide to implement a given interface to work with a function
 
-##
+## Classes
+
+- These are blueprints to create an `object` with some
+
+  - **fields/properties** (values)
+  - **methods** (functions)
+
+- The represent a class of things
+  - example: if `Mobile Phone` is a class,
+    - `iPhone`, `Galaxy Note`, `Pixel`, `Mi A3` are all instances of the `Mobile Phone` class
