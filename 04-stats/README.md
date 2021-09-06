@@ -166,3 +166,13 @@ class HoldAnything<T> {
 
 const holdNumber = new HoldAnything<number>()
 ```
+
+## Inheritance vs. Composition
+
+- **Inheritance**: Characterized by an `is a` relationship between two classes
+
+  - Child Class `is a` Parent Class extended using `extends`
+  - `abstract` classes and `abstract` methods are uses
+
+- **Composition**: Characterized by a `has a` relationship between two classes
+  - a Class has another Class within it, integrated with an `interface`
