@@ -86,9 +86,10 @@ const printMatchResult = ():MatchResult => {
 - **Caution!** - `enum` usage is very subtle
 
   - use `enums` only when all possible fields are known!
+    - enum fields are not to change in the future programmatically
   - new `enum` fields cannot be added programmatically on-the-fly like in objects
 
-- it is possible to initialize enums without any values assigned to it
+- it is possible to initialize enums without any values assigned to it, like the following example:
 
 ```js
 enum MatchResult {
@@ -99,6 +100,17 @@ enum MatchResult {
 
 ```
 
-- **Notes**:
-  - when an `enum` gets complied to JS, it is actually an object (with an IIFE wrapper)
-  - all fields of an `enum` must be hardcoded! i.e. new fields cannot be programmatically added
+- when an `enum` gets complied to JS, it is actually an object (with an IIFE wrapper)
+
+- all fields of an `enum` must be hardcoded! i.e. new fields cannot be programmatically added
+
+  - examples:
+    - storing the Primary Colors is good `enum` usage
+    - storing all blog post title for a blog app is not a good application of `enum`
+      - blog users need to be able to add more blogs and this is a bad fit for `enum`
+    - storing drink sizes (Small, Medium, Large) is good application
+    - storing all years from 1970: while it is a finite dataset, it has way too many values and hence it is not a good fit for `enum`
+    - storing netflix movie categories: bad `enum` application, more categories may need to be added in the future
+    - storing the _read_ status of an SMS: good `enum` application, finite set, small set, but ensure to cover all status cases like _read_, _unread_, _not sent_, etc
+
+- again, primary purpose of `enum` is to signal to other engineers to communicate possible values or outcomes
