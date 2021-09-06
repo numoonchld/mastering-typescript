@@ -46,7 +46,7 @@
 - Type Definition files for ALL NodeJS standard library modules can be loaded in a single file
   - `npm install @types/node`
 
-## ENUMS - Enumeration
+## `enum` - Enumeration
 
 - essentially an object that stores some closely related values
 
