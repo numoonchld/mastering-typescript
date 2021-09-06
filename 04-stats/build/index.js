@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = __importDefault(require("fs"));
+/* LOAD ALL MATCHES */
 var matches = fs_1.default
     .readFileSync('football.csv', {
     encoding: 'utf-8',
@@ -11,6 +12,13 @@ var matches = fs_1.default
     .split('\n')
     .map(function (line) { return line.split(','); });
 console.log(matches);
+var MatchResult;
+(function (MatchResult) {
+    MatchResult["HomeWin"] = "H";
+    MatchResult["AwayWin"] = "A";
+    MatchResult["Draw"] = "D";
+})(MatchResult || (MatchResult = {}));
+/* COUNT MAN-U WINS */
 var manUnitedWins = 0;
 for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
     var match = matches_1[_i];
@@ -21,4 +29,5 @@ for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
         manUnitedWins++;
     }
 }
+/* REPORT */
 console.log("Man United won " + manUnitedWins + " games!");

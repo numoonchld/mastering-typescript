@@ -1,5 +1,6 @@
 import fs from 'fs';
 
+/* LOAD ALL MATCHES */
 const matches = fs
   .readFileSync('football.csv', {
     encoding: 'utf-8',
@@ -9,6 +10,13 @@ const matches = fs
 
 console.log(matches);
 
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D',
+}
+
+/* COUNT MAN-U WINS */
 let manUnitedWins = 0;
 
 for (let match of matches) {
@@ -19,4 +27,5 @@ for (let match of matches) {
   }
 }
 
+/* REPORT */
 console.log(`Man United won ${manUnitedWins} games!`);

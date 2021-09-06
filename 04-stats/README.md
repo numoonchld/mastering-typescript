@@ -45,3 +45,41 @@
 
 - Type Definition files for ALL NodeJS standard library modules can be loaded in a single file
   - `npm install @types/node`
+
+## ENUMS - Enumeration
+
+- essentially an object that stores some closely related values
+
+  - the values are always strings or numbers!
+
+- typically used for to represent outcomes when there is a fixed and a small set of outcomes
+
+- example: an `enum` defined for the outcomes of a football match
+
+```js
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D',
+}
+
+const printMatchResult = ():MatchResult => {
+  if (match[5] === 'H') {
+    return MatchResult.HomeWin
+  }
+  ...
+}
+
+```
+
+- `enums` generate a new Type as well
+- accessing `enum` fields values is like accessing plain object values
+
+### Why to use Enums over objects?
+
+- for clear communication with developer peers
+  - no performance benefit, but is used to signal to other developers that it is a set of closely related values
+
+### Caution!
+
+- `enum` usage is very subtle
