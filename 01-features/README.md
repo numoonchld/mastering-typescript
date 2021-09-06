@@ -173,3 +173,16 @@ class Vehicle {
   constructor(public color: string) {}
 }
 ```
+
+## Generics
+
+- these are like function arguments
+
+  - but for types in class and function definitions
+
+- allows Type definition of a property (or argument or a return value) at a future point
+- a generic customizes the definition of a class
+  - similar to how the parameters of a function provide ability to customize the arguments passed to the function
+
+### Generics with Functions
+
