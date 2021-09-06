@@ -176,3 +176,4 @@ const holdNumber = new HoldAnything<number>()
 
 - **Composition**: Characterized by a `has a` relationship between two classes
   - a Class has another Class within it, integrated with an `interface`
+  - coupled tightly with delegation!
