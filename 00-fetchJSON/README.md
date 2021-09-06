@@ -15,4 +15,4 @@
 
 ## Explanation
 
-- `index.ts` file has an implementation of an `Interface` to speficy TYPE of response payload of an axios network request
+- `index.ts` file has an implementation of an `Interface` to specify TYPE of response payload of an axios network request
