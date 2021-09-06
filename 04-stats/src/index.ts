@@ -8,7 +8,7 @@ import { HTMLReport } from './reportTargets/HTMLReport';
 // LOAD CSV FILE
 const csvFileReader = new CsvFileReader('football.csv');
 
-/* FLEXIBLE IMPLEMENTATION */
+/* FLEXIBLE IMPLEMENTATION ----------------------------------- */
 
 // LOAD MATCH DATA FROM CSV FILE - FLEXIBLE
 const matchReader1 = new MatchReader(csvFileReader);
@@ -29,10 +29,12 @@ const HTMLAnalytics = new Analytics(
 consoleAnalytics.report(matchReader1.matches);
 HTMLAnalytics.report(matchReader1.matches);
 
-/* STATIC IMPLEMENTATION */
+/* STATIC IMPLEMENTATION ------------------------------------ */
 
 // LOAD MATCH DATA FROM CSV FILE - STATIC
 const matchReader2 = MatchReader.fromCSV('football.csv');
+matchReader2.load();
 
 // GENERATE REPORT FOR WINS
 const analytics = Analytics.HTMLWins('Man United');
+analytics.report(matchReader2.matches);
