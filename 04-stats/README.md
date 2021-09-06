@@ -74,12 +74,31 @@ const printMatchResult = ():MatchResult => {
 
 - `enums` generate a new Type as well
 - accessing `enum` fields values is like accessing plain object values
+- **Primary Goal**: it is to signal to other engineers that the fields are all closely related values
 
 ### Why to use Enums over objects?
 
 - for clear communication with developer peers
   - no performance benefit, but is used to signal to other developers that it is a set of closely related values
 
-### Caution!
+### `enum` usage Scenarios
 
-- `enum` usage is very subtle
+- **Caution!** - `enum` usage is very subtle
+
+  - use `enums` only when all possible fields are known!
+  - new `enum` fields cannot be added programmatically on-the-fly like in objects
+
+- it is possible to initialize enums without any values assigned to it
+
+```js
+enum MatchResult {
+  HomeWin,
+  AwayWin,
+  Draw,
+}
+
+```
+
+- **Notes**:
+  - when an `enum` gets complied to JS, it is actually an object (with an IIFE wrapper)
+  - all fields of an `enum` must be hardcoded! i.e. new fields cannot be programmatically added
