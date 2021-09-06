@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CsvFileReader = void 0;
 var fs_1 = __importDefault(require("fs"));
+var utils_1 = require("./utils");
 var CsvFileReader = /** @class */ (function () {
     function CsvFileReader(filename) {
         this.filename = filename;
@@ -17,7 +18,17 @@ var CsvFileReader = /** @class */ (function () {
         })
             .split('\n')
             .map(function (line) { return line.split(','); })
-            .map(this.mapLine);
+            .map(function (line) {
+            return [
+                (0, utils_1.dateStringToDate)(line[0]),
+                line[1],
+                line[2],
+                parseInt(line[3]),
+                parseInt(line[4]),
+                line[5],
+                line[6],
+            ];
+        });
     };
     return CsvFileReader;
 }());

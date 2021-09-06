@@ -114,3 +114,55 @@ enum MatchResult {
     - storing the _read_ status of an SMS: good `enum` application, finite set, small set, but ensure to cover all status cases like _read_, _unread_, _not sent_, etc
 
 - again, primary purpose of `enum` is to signal to other engineers to communicate possible values or outcomes
+
+## Type Assertions
+
+- by convention, do not export anything from `index.ts` file
+- use the `as` keyword
+
+  - helps override default TS behavior
+
+- `enum`s and `interface`s are commonly used to assert Types of API responses or file read outputs!
+
+### Tuples
+
+- looks very similar to a JS array, but it expects array items to has a very specific Types within it
+  - also, the order in which the Types appear matters
+
+```ts
+type MatchData = [Date, string, string, number, number, MatchResult, string]; // Type Signature of a Tuple
+```
+
+- however, if you're using Tuples, the reusability of that class might take a hit!
+  - be cautious about that
+  - this is typically a sign of the Class needing refactoring
+
+## Generics
+
+- these are like function arguments
+
+  - but for types in class and function definitions
+
+- allows Type definition of a property (or argument or a return value) at a future point
+- a generic customizes the definition of a class
+  - similar to how the parameters of a function provide ability to customize the arguments passed to the function
+
+```js
+class HoldAnything<DataType> {
+  data: DataType;
+}
+
+const holdNumber = new HoldAnything<number>()
+```
+
+- treat generics like function arguments
+  - both are very similar in nature
+- by convention, the names of Generics is always `<T>`
+
+```js
+class HoldAnything<T> {
+  data: T;
+}
+
+const holdNumber = new HoldAnything<number>()
+```
